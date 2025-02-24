@@ -14,3 +14,10 @@
 // Write an efficient algorithm for the following assumptions:
 
 // N is an integer within the range [1..2,147,483,647].
+
+function solution(N){
+    //Change N to a binary number
+    const binN = N.toString(2);
+    return binN;
+}
+console.log(solution(10))
