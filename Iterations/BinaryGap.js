@@ -18,6 +18,30 @@
 function solution(N){
     //Change N to a binary number
     const binN = N.toString(2);
-    return binN;
+    //Now let's decrete variables to deal with gaps
+    let maxGap =0;
+    let currentGap = 0;
+    let isCounting = false
+
+    //Implimenting the count of the gap
+    for(let i = 0;i < binN.length; i++){
+     //Check if the first character is one
+     if(binN[i] === '1'){
+        if(isCounting){
+            maxGap = Math.max(maxGap,currentGap);
+            currentGap = 0;
+        }
+        isCounting = true;
+     }else if(isCounting){
+        currentGap++;
+     }
+    }
+    return maxGap;
 }
-console.log(solution(10))
+console.log(solution(9));    // Output: 2
+console.log(solution(529));  // Output: 4
+console.log(solution(20));   // Output: 1
+console.log(solution(15));   // Output: 0
+console.log(solution(32));   // Output: 0
+console.log(solution(1041)); // Output: 5
+console.log(solution(20));   // Output: 1 (Now correct)
