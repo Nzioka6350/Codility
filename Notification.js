@@ -12,6 +12,7 @@ function solution(message, K) {
       } else {
         break; // Exceeding limit
       }
+      
     }
   
     // If the full message fits within K characters
