@@ -14,7 +14,6 @@ function solution(message, K) {
       }
       
     }
-    
   
     // If the full message fits within K characters
     if (notification.length === message.length) {
