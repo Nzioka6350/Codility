@@ -5,4 +5,5 @@ def negativeTemp(temp):
     for i in range(N):
         if(temp[i] < 0):
             days += 1
+            
     return days
