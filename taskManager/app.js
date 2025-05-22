@@ -1,8 +1,9 @@
 import express from 'express';
+import dbConfig from './db/dbConfig.js';
+import dotenv from 'dotenv'
 const app = express();
-const port = 3000;
 
-
+const port = process.env.DB_PORT;
 
 
 app.listen(port,()=>{
