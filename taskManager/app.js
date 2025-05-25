@@ -11,8 +11,6 @@ app.use(express.static('public'));
 
 
 
-s
-
 
 app.listen(port,()=>{
     console.log("App is running at port", port);
